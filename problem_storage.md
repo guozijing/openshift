@@ -136,6 +136,10 @@
             {
                 "insecure-registry": ["registry.ocp4.redhat.ren:5443"]
             }
+    3 vim /lib/systemd/system/docker.service
+    	ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --insecure-registry registry.ocp4.redhat.ren:5443
+    4 sudo systemctl daemon-reload
+    5 sudo systemctl restart docker
 
 ## host nic
     1 nmcli con show
