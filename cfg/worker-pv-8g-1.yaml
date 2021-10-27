@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: worker-pv-8g
+spec:
+  storageClassName: nfs-storage-provisioner
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    path: /data/export/pv/8g
+    server: 192.168.7.11
