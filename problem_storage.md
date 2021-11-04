@@ -60,7 +60,7 @@
            node-role.kubernetes.io/worker-ric: ""
 
 ## nfs storage
-    1 oc get pod -n nfs-storage-provisioner
+    1 oc get pod -n nfs-provisioner
       bash /data/ocp4/ocp4-upi-helpernode-master/files/nfs-provisioner-setup.sh
 
 ## pv and pvc
